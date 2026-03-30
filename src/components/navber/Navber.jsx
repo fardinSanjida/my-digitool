@@ -13,7 +13,7 @@ const Navber = () => {
       }}>DigiTools</h1>
   </div>
   <div>
-    <ul className="sm md:flex font-bold gap-4 justify-center">
+    <ul className="hidden md:flex font-bold gap-4 justify-center">
       <li><a>Products</a></li>
       <li><a>Features</a></li>
       <li><a>Pricing</a></li> 
@@ -28,13 +28,13 @@ const Navber = () => {
   <div className="flex gap-2 justify-center">
     <div className="flex align-center" >
       <div tabIndex={0} role="button" >
-        <div className="sm:hidden md:flex indicator my-3">
+        <div className="hidden md:flex indicator my-3 mx-3">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /> </svg>
           <span className="badge badge-sm indicator-item"></span>
         </div>
       </div>
 
-           <button className="btn btn-soft  ">Log in</button>
+           <button className="btn btn-soft hidden md:flex  ">Log in</button>
            <button className="btn btn-primary">Get Started</button> </div>
    
     </div>
