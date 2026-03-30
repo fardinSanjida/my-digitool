@@ -13,7 +13,7 @@ const Navber = () => {
       }}>DigiTools</h1>
   </div>
   <div>
-    <ul className="hidden md:flex font-bold gap-4 justify-center">
+    <ul className="hidden lg:flex font-bold gap-4 justify-center">
       <li><a>Products</a></li>
       <li><a>Features</a></li>
       <li><a>Pricing</a></li> 
