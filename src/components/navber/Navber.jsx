@@ -2,7 +2,7 @@ import React from "react";
 
 const Navber = () => {
     return (
-    <div className="navbar bg-base-100 flex w-8/12 justify-between items-center mx-auto py-4">
+    <div className="navbar bg-base-100 flex w-10/12 justify-between items-center mx-auto py-4">
   <div>
     <h1 className="text-3xl font-bold "  
     style={{

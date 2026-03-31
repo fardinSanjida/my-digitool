@@ -5,7 +5,7 @@ import PlayPng from '../../assets/products/Play.png';
 
 const Banner = () => {
     return (
-        <div className=' w-8/12 md:flex justify-between mx-auto my-21 '>
+        <div className=' w-10/12 md:flex justify-between mx-auto my-21 '>
             <div className='w-[50%] my-auto'>
                 <button className='text-purple-600 bg-purple-200 px-4 py-2 rounded-full flex w-[300px] '> <img src={Group5Png} alt="New: AI-Powered Tools Available" className='w-6 h-6 mr-2' /> New: AI-Powered Tools Available</button>
                     <h1 className='text-center text-6xl md:text-7xl font-bold md:text-left mt-8'>Supercharge Your <br></br>Digital Workflow</h1>
