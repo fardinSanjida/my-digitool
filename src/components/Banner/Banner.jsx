@@ -1,20 +1,23 @@
 import React from 'react';
 import BannerPng from '../../assets/products/banner.png';
+import Group5Png from '../../assets/products/Group 5.png';
+import PlayPng from '../../assets/products/Play.png';
 
 const Banner = () => {
     return (
-        <div>
-            <div>
-                <button></button>
-                    <h1 className='text-5xl font-bold text-center mt-10'>Welcome to DigiTools</h1>
-                    <p className='text-center mt-4 text-lg'>Discover the power of digital tools with DigiTools. Our platform offers a wide range of innovative solutions to enhance your productivity and creativity. Whether you're a student, professional, or hobbyist, DigiTools has something for everyone. Explore our collection of cutting-edge software, applications, and resources designed to help you achieve your goals. Join us today and unlock your full potential with DigiTools!</p>
-                    <div className='flex justify-center mt-6'>
-                        <button className='btn btn-primary'>Get Started</button>
-                        <button className='btn btn-soft ml-4'>Learn More</button>
+        <div className=' w-8/12 md:flex justify-between mx-auto my-21 '>
+            <div className='w-[50%] my-auto'>
+                <button className='text-purple-600 bg-purple-200 px-4 py-2 rounded-full flex'> <img src={Group5Png} alt="New: AI-Powered Tools Available" className='w-6 h-6 mr-2' /> New: AI-Powered Tools Available</button>
+                    <h1 className='text-7xl text-center font-bold md:text-left mt-8'>Supercharge Your <br></br>Digital Workflow</h1>
+                    <p className='text-left mt-4 text-lg'>Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today.
+Explore Products</p>
+                    <div className='flex mt-6 '>
+                        <button className='btn text-white bg-gradient-to-r from-indigo-600 to-purple-800 hover:from-purple-700 hover:via-indigo-700 hover:to-purple-900 px-6 py-4 rounded-full'>Explore Products</button>
+                        <button className='btn text-purple-500 border-purple-500 hover:bg-gradient-to-r from-purple-600 to-indigo-600 hover:text-white ml-4 rounded-full'> <img src={PlayPng} alt="Watch Demo" className='w-6 h-6 mr-2' /> Watch Demo</button>
                     </div>
             </div>
             <div>
-                <img src={BannerPng} alt="Banner" className='w-full mt-10' />
+                <img className=' mt-10' src={BannerPng } alt="Banner" />
 
             </div>
         </div>
