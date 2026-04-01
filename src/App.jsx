@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
- import React, { useState } from 'react';
+import React, { useState } from 'react';
+import { imageMap } from './data/imageMap';
 import './App.css'
 import Banner from './components/Banner/Banner';
 import Navber from './components/navber/Navber';
@@ -15,7 +16,8 @@ import Footer from './components/Footer/footer';
 
 const getPlans = async () => {
   const res = await fetch('/data.json');
-  return res.json();
+  const data = await res.json();
+  return data.map(plan => ({ ...plan, icon: imageMap[plan.icon] }));
 };
 
 function App() {
