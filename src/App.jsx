@@ -9,6 +9,7 @@ import Cart from './components/Carts/Cart';
 import Tools from './components/Plans/Tools';
 import Steps from './components/Steps/Steps';
 import Pricing from './components/Pricing/Pricing';
+import Workflow from './components/Workflow/Workflow';
 
 const getPlans = async () => {
   const res = await fetch('/data.json');
@@ -54,6 +55,9 @@ function App() {
 
     <Steps></Steps>
     <Pricing></Pricing>
+    <Workflow></Workflow>
+
+
     </>
     
   )
