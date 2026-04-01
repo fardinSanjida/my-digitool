@@ -7,6 +7,7 @@ import Plans from './components/Plans/Plans';
 import User from './components/Users/User';
 import Cart from './components/Carts/Cart';
 import Tools from './components/Tools/Tools';
+import Steps from './components/Steps/Steps';
 
 const getPlans = async () => {
   const res = await fetch('/data.json');
@@ -26,10 +27,23 @@ function App() {
     <Tools></Tools>
 
     {/* name of each tab group should be unique */}
-<div className="tabs tabs-box justify-center bg-transparent  ">
-  <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Products")} className="tab w-[20%] rounded-full" aria-label="Products" checked={activeTab === 'Products'} />
-  <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Cart")} className="tab w-[20%] rounded-full" aria-label={`Cart (${carts.length})`} checked={activeTab === 'Cart'} />
-   
+<div className="tabs tabs-box justify-center bg-transparent gap-4 mt-10">
+  <input 
+    type="radio" 
+    name="my_tabs_1" 
+    onChange={() => setActiveTab("Products")} 
+    className={`tab w-[20%] rounded-full font-bold transition-all ${activeTab === 'Products' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-none' : 'bg-gray-200 text-gray-700'}`} 
+    aria-label="Products" 
+    checked={activeTab === 'Products'} 
+  />
+  <input 
+    type="radio" 
+    name="my_tabs_1" 
+    onChange={() => setActiveTab("Cart")} 
+    className={`tab w-[20%] rounded-full font-bold transition-all ${activeTab === 'Cart' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white border-none' : 'bg-gray-200 text-gray-700'}`} 
+    aria-label={`Cart (${carts.length})`} 
+    checked={activeTab === 'Cart'} 
+  />
 </div>
 
     <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}> 
@@ -37,6 +51,7 @@ function App() {
     </Suspense>
     {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart>}
 
+    <Steps></Steps>
     </>
     
   )
