@@ -1,5 +1,5 @@
  import React, { use } from 'react';
-import Description from '../planDescription/Description';
+import Description from './Description';
 
 const Plans = ({ plansPromise, carts, setCarts }) => {
    

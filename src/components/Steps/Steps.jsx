@@ -2,7 +2,7 @@ import React from 'react';
 
 const Steps = () => {
     return (
-        <div className='bg-gray-100 mx-auto mt-30 mb-10'>
+        <div className='bg-base-200 mx-auto mt-30 mb-10'>
             <div className='w-10/12 mx-auto pt-10 '>
             <h2 className='text-5xl font-extrabold mb-6 text-center'>Get Started in 3 Steps</h2>
             <p className='text-center  text-gray-500'>Start using premium digital tools in minutes, not hours.</p>

@@ -6,8 +6,9 @@ import Navber from './components/navber/Navber';
 import Plans from './components/Plans/Plans';
 import User from './components/Users/User';
 import Cart from './components/Carts/Cart';
-import Tools from './components/Tools/Tools';
+import Tools from './components/Plans/Tools';
 import Steps from './components/Steps/Steps';
+import Pricing from './components/Pricing/Pricing';
 
 const getPlans = async () => {
   const res = await fetch('/data.json');
@@ -52,6 +53,7 @@ function App() {
     {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart>}
 
     <Steps></Steps>
+    <Pricing></Pricing>
     </>
     
   )
