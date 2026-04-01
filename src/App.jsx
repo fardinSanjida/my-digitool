@@ -10,6 +10,8 @@ import Tools from './components/Plans/Tools';
 import Steps from './components/Steps/Steps';
 import Pricing from './components/Pricing/Pricing';
 import Workflow from './components/Workflow/Workflow';
+import Footer from './components/Footer/footer';
+
 
 const getPlans = async () => {
   const res = await fetch('/data.json');
@@ -56,8 +58,8 @@ function App() {
     <Steps></Steps>
     <Pricing></Pricing>
     <Workflow></Workflow>
-
-
+    <Footer></Footer>
+  
     </>
     
   )
