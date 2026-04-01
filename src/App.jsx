@@ -28,14 +28,14 @@ function App() {
     {/* name of each tab group should be unique */}
 <div className="tabs tabs-box justify-center bg-transparent  ">
   <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Products")} className="tab w-[20%] rounded-full" aria-label="Products" checked={activeTab === 'Products'} />
-  <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Cart")} className="tab w-[20%] rounded-full" aria-label="Cart" checked={activeTab === 'Cart'} />
+  <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Cart")} className="tab w-[20%] rounded-full" aria-label={`Cart (${carts.length})`} checked={activeTab === 'Cart'} />
    
 </div>
 
     <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}> 
     {activeTab === 'Products' && <Plans plansPromise={plansPromise} carts={carts} setCarts={setCarts}></Plans>}
     </Suspense>
-    {activeTab === 'Cart' && <Cart carts={carts}></Cart>}
+    {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart>}
 
     </>
     

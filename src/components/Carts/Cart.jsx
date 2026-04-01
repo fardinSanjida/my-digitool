@@ -1,7 +1,16 @@
 import React from 'react';
 
-const Cart = ({ carts }) => {
+const Cart = ({ carts, setCarts }) => {
     console.log(carts);
+    const handlePayment = () => {
+        setCarts([]);
+    }
+
+    const handleDelete = (itemIndex) => {
+        const filteredArray = carts.filter((_, index) => index !== itemIndex);
+        setCarts(filteredArray);
+    }
+
     return (
         <div className='w-10/12 mx-auto mt-10 mb-10'>
             <h2 className='text-3xl font-bold mb-6 text-left'>Your Cart</h2>
@@ -21,7 +30,7 @@ const Cart = ({ carts }) => {
                                 </div>
                             </div>
                             <div className='text-right'>
-                               <button className='btn btn-outline btn-error border-none'>Remove</button>
+                               <button onClick={() => handleDelete(index)} className='btn btn-outline btn-error border-none'>Remove</button>
                             </div>
                         </div>
                     ))}
@@ -32,7 +41,7 @@ const Cart = ({ carts }) => {
                         </p>
                     </div>
                     <div>
-                        <button className='btn text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full w-full'>Proceed to Checkout</button>
+                        <button onClick={handlePayment} className='btn text-white bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full w-full'>Proceed to Checkout</button>
                     </div>
         
                 </div>
