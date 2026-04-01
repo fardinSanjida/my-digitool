@@ -20,7 +20,7 @@ function App() {
   
   return (
     <>
-    <Navber></Navber>
+    <Navber carts={carts}></Navber>
     <Banner></Banner>
     <User></User>
     <Tools></Tools>

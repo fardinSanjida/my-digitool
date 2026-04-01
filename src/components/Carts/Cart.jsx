@@ -1,18 +1,14 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
 const Cart = ({ carts, setCarts }) => {
     console.log(carts);
     const handlePayment = () => {
         setCarts([]);
-         toast.success("Payment successful!");
     }
 
     const handleDelete = (itemIndex) => {
         const filteredArray = carts.filter((_, index) => index !== itemIndex);
         setCarts(filteredArray);
-
-        toast.success("Item removed from cart!");
     }
 
     return (
@@ -34,7 +30,7 @@ const Cart = ({ carts, setCarts }) => {
                                 </div>
                             </div>
                             <div className='text-right'>
-                               <button onClick={() => handleDelete(index)} className='btn btn-outline btn-error border-none'>Remove</button>
+                               <button type="button" onClick={() => handleDelete(index)} className='btn btn-outline btn-error border-none'>Remove</button>
                             </div>
                         </div>
                     ))}
