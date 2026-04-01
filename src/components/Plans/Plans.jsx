@@ -2,7 +2,7 @@
 import Description from '../planDescription/Description';
 
 const Plans = ({ plansPromise, carts, setCarts }) => {
-    console.log(plansPromise);
+   
     const data = use(plansPromise);
    
     

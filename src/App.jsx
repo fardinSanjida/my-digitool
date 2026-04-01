@@ -14,10 +14,10 @@ const getPlans = async () => {
 };
 
 function App() {
-  const plansPromise = getPlans();
-  const [activeTab, setActiveTab] = useState('products');
+  const plansPromise = getPlans(); 
+  const [activeTab, setActiveTab] = useState('Products');
   const [carts, setCarts] = useState([]);
-  console.log(carts);
+  
   return (
     <>
     <Navber></Navber>
@@ -27,8 +27,8 @@ function App() {
 
     {/* name of each tab group should be unique */}
 <div className="tabs tabs-box justify-center bg-transparent  ">
-  <input type="radio" name="my_tabs_1" onClick={()=>setActiveTab("Products")} className="tab w-[20%] rounded-full" aria-label="Products" defaultChecked />
-  <input type="radio" name="my_tabs_1" onClick={()=>setActiveTab("Cart")} className="tab w-[20%] rounded-full" aria-label="Cart" />
+  <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Products")} className="tab w-[20%] rounded-full" aria-label="Products" checked={activeTab === 'Products'} />
+  <input type="radio" name="my_tabs_1" onChange={()=>setActiveTab("Cart")} className="tab w-[20%] rounded-full" aria-label="Cart" checked={activeTab === 'Cart'} />
    
 </div>
 

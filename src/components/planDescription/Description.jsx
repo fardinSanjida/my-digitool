@@ -7,7 +7,7 @@ const Description = ({ plan, carts, setCarts }) => {
 
      const handleBuy = () => {
         setPlans(!isPlan);
-        setCarts([...carts, plan]);
+        setCarts((prevCarts) => [...(Array.isArray(prevCarts) ? prevCarts : []), plan]);
      }
 
     return (
