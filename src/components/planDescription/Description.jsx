@@ -1,13 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
 import VectorPng from '../../assets/products/Vector.png';
+import { toast } from 'react-toastify';
 
 const Description = ({ plan, carts, setCarts }) => {
      const [isPlan, setPlans] = useState(false);
 
      const handleBuy = () => {
         setPlans(!isPlan);
-        setCarts((prevCarts) => [...(Array.isArray(prevCarts) ? prevCarts : []), plan]);
+
+        const isFound = carts.find((item) => item.id === plan.id);
+        if (isFound) {
+            toast.info("This plan is already in cart!");
+            return;
+        }
+        setCarts([...carts, plan]);
+        toast.success("Plan added to cart!");
      }
 
     return (
